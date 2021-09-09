@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'diary.apps.DiaryConfig',
+    'accounts.apps.AccountsConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -121,7 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#追加の項目
+#----------追加の項目----------
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -184,3 +186,5 @@ MESSAGE_TAGS = {
     messages.SUCCESS:'alert alert-success',
     messages.INFO:'alert alert-info',
 }
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
